@@ -16,7 +16,7 @@
  * Plugin Name:       AE WP Plugin
  * Plugin URI:        //https://github.com/sajidmanzoor10p/ae-wp-plugin
  * Description:       American Eagle Self Hosted Plugin for Updates testing
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Sajid
  * Author URI:        https://americaneagle.com/
  * License:           GPL-2.0+
