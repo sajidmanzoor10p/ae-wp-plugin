@@ -5,7 +5,7 @@
 	"author_profile" : "https://profiles.wordpress.org/sajiddesigner",
     	"donate_link" : "https://americaneagle.com",
 	"version" : "1.1.1",
-	"download_url" : "https://github.com/sajidmanzoor10p/ae-wp-plugin/releases/download/1.1.1/ae-wp-plugin.zip",
+	"download_url" : "https://github.com/WPFreighter/wp-freighter/releases/download/v1.1.1/ae-wp-plugin.zip",
 	"requires" : "5.6",
 	"tested" : "6.4",
 	"requires_php" : "5.6",
