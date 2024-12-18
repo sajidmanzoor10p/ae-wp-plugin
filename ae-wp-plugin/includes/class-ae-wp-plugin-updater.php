@@ -1,8 +1,5 @@
 <?php
-
-namespace WPFreighter;
-
-class Updater {
+class Ae_WP_Plugin_Updater {
 
     public $plugin_slug;
     public $version;
@@ -11,7 +8,7 @@ class Updater {
 
     public function __construct() {
 
-        if ( defined( 'WP_FREIGHTER_DEV_MODE' ) ) {
+        if ( defined( 'AE_WP_PLUGIN_DEV_MODE' ) ) {
             add_filter('https_ssl_verify', '__return_false');
             add_filter('https_local_ssl_verify', '__return_false');
             add_filter('http_request_host_is_external', '__return_true');
@@ -19,7 +16,7 @@ class Updater {
 
         $this->plugin_slug   = dirname ( plugin_basename( __DIR__ ) );
         $this->version       = '1.1';
-        $this->cache_key     = 'wpfreighter_updater';
+        $this->cache_key     = 'ae_wp_plugin_updater';
         $this->cache_allowed = false;
 
         add_filter( 'plugins_api', [ $this, 'info' ], 20, 3 );

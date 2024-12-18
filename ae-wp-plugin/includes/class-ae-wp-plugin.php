@@ -115,6 +115,7 @@ class Ae_Wp_Plugin {
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-ae-wp-plugin-admin.php';
+		require plugin_dir_path( __FILE__ ) . '/class-ae-wp-plugin-updater.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -156,8 +157,8 @@ class Ae_Wp_Plugin {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-		$this->loader->add_action( 'plugins_api', $plugin_admin, 'ae_plugin_info', 20 );
-		$this->loader->add_action( 'site_transient_update_plugins', $plugin_admin, 'ae_push_update' );
+		// $this->loader->add_action( 'plugins_api', $plugin_admin, 'ae_plugin_info', 20, 3 );
+		// $this->loader->add_action( 'site_transient_update_plugins', $plugin_admin, 'ae_push_update' );
 		
 
 		// add_filter( 'plugins_api', 'misha_plugin_info', 20, 3);
