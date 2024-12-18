@@ -14,9 +14,9 @@
  *
  * @wordpress-plugin
  * Plugin Name:       AE WP Plugin
- * Plugin URI:        https://https://github.com/sajidmanzoor10p/ae-wp-plugin
+ * Plugin URI:        //https://github.com/sajidmanzoor10p/ae-wp-plugin
  * Description:       American Eagle Self Hosted Plugin for Updates testing
- * Version:           1.0.0
+ * Version:           1.1.1
  * Author:            Sajid
  * Author URI:        https://americaneagle.com/
  * License:           GPL-2.0+
@@ -104,7 +104,7 @@ function misha_plugin_info( $res, $action, $args ){
 
 	// info.json is the file with the actual plugin information on your server
 	$remote = wp_remote_get( 
-		'https://https://github.com/sajidmanzoor10p/ae-wp-plugin/ae-wp-plugin.json', 
+		'https://raw.githubusercontent.com/sajidmanzoor10p/ae-wp-plugin/refs/heads/main/ae-wp-plugin/ae-wp-plugin.json?token=GHSAT0AAAAAAC4CZNBVXYGXOBJMZQXGLUSEZ3CZUYA', 
 		array(
 			'timeout' => 10,
 			'headers' => array(
@@ -167,7 +167,7 @@ function misha_push_update( $transient ){
 	}
 
 	$remote = wp_remote_get( 
-		'https://https://github.com/sajidmanzoor10p/ae-wp-plugin/ae-wp-plugin.json',
+		'https://raw.githubusercontent.com/sajidmanzoor10p/ae-wp-plugin/refs/heads/main/ae-wp-plugin/ae-wp-plugin.json?token=GHSAT0AAAAAAC4CZNBVXYGXOBJMZQXGLUSEZ3CZUYA',
 		array(
 			'timeout' => 10,
 			'headers' => array(
