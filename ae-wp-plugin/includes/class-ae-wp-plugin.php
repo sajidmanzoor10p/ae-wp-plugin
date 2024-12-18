@@ -156,7 +156,11 @@ class Ae_Wp_Plugin {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'plugins_api', $plugin_admin, 'ae_plugin_info', 20 );
+		$this->loader->add_action( 'site_transient_update_plugins', $plugin_admin, 'ae_push_update' );
+		
 
+		// add_filter( 'plugins_api', 'misha_plugin_info', 20, 3);
 	}
 
 	/**
@@ -214,5 +218,4 @@ class Ae_Wp_Plugin {
 	public function get_version() {
 		return $this->version;
 	}
-
 }
